@@ -5,10 +5,10 @@ from YT_API.get_info import YouTube
 
 @app.route('/api/')
 def info():
-    args = request.args
-    id = args.get('id')
-    username = args.get('username')
-    print(args)
+    form = request.form
+    id = form.get('id')
+    username = form.get('username')
+    print(form)
     if id:
         try:
             req = YouTube(id=id)
