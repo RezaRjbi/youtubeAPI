@@ -1,8 +1,7 @@
 from googleapiclient.discovery import build
 
-
-
 class YouTube:
+
     API_KEY = 'AIzaSyA20aP7050g9V8ufXKn755gY7ym8oyTbKs'
     youtube = build('youtube', 'v3', developerKey=API_KEY)
 
@@ -32,4 +31,3 @@ class YouTube:
                             subscribers=response['items'][0]['statistics']['subscriberCount'],
                             total_videos=response['items'][0]['statistics']['videoCount'])
         return response_dic
-

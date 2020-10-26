@@ -2,30 +2,22 @@ from YT_API import app
 from flask import request, jsonify
 from YT_API.get_info import YouTube
 
+def send_res(req = None):
+    if (req):
+        response = req.fetch_data()
+        return jsonify(response)
+    return jsonify(message='invalid id/username')
 
-@app.route('/api/')
+@app.route('/info')
 def info():
     form = request.form
     id = form.get('id')
     username = form.get('username')
-    print(form)
-    if id:
-        try:
+    try:
+        if id:
             req = YouTube(id=id)
-            response = req.fetch_data()
-            return jsonify(response)
-        except KeyError:
-            return jsonify(message='invalid id/username')
-    elif username:
-        try:
+        elif username:
             req = YouTube(username=username)
-            response = req.fetch_data()
-            return jsonify(response)
-        except KeyError:
-            return jsonify(message='invalid id/username')
-    else:
-        return jsonify(message='no valid id or username provided')
-
-@app.route('/')
-def home():
-    return 'hi'
+    except KeyError:
+        pass
+    return send_res()
