@@ -14,10 +14,7 @@ def info():
     id = form.get('id')
     username = form.get('username')
     try:
-        if id:
-            req = YouTube(id=id)
-        else:
-            req = YouTube(username=username)
+        req = YouTube(id=id, username=username)
     except:
         pass
     return send_res(req)
