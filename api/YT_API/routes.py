@@ -2,7 +2,7 @@ from YT_API import app
 from flask import request, jsonify
 from YT_API.get_info import YouTube
 
-def send_res(req = None):
+def send_res(req):
     if (req):
         response = req.fetch_data()
         return jsonify(response)
@@ -16,8 +16,8 @@ def info():
     try:
         if id:
             req = YouTube(id=id)
-        elif username:
+        else:
             req = YouTube(username=username)
-    except KeyError:
+    except:
         pass
-    return send_res()
+    return send_res(req)

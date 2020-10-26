@@ -13,7 +13,7 @@ class YouTube:
         """
         self.id = id
         self.username = username
-        self.respons = None
+        self.response = None
 
     def fetch_data(self):
         request = self.youtube.channels().list(
