@@ -27,3 +27,11 @@ def link_type(link: str):
         id = None
         username = None
     return id, username
+
+
+def link_checker(link):
+    bad_links = ['user', 'channel', '/c/']
+    for bad_link in bad_links:
+        if bad_link in link:
+            return False
+    return True

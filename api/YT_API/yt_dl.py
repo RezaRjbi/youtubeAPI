@@ -1,12 +1,11 @@
+import os
+import sys
+
+PATH = os.path.join(os.getcwd())
+sys.path.append(PATH)
+
 import youtube_dl
-
-
-def link_checker(link):
-    bad_links = ['user', 'channel', '/c/']
-    for bad_link in bad_links:
-        if bad_link in link:
-            return False
-    return True
+from YT_API.utils import link_checker
 
 
 class VideoObj:
@@ -51,9 +50,3 @@ class VideoObj:
                             download_info=download_links
                             )
         return response_dic
-
-
-if __name__ == '__main__':
-    video = VideoObj('https://www.youtube.com/channel/UCJBboGVe7LDwNuQ02L4zmbQ')
-    links = video.yt_link_finder()
-    print(VideoObj.as_dict(links))
