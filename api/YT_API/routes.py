@@ -24,3 +24,7 @@ def download():
     _info = video.yt_link_finder()
     response_dict = VideoObj.as_dict(_info)
     return jsonify(response_dict)
+
+@app.route('/test')
+def test():
+    return jsonify(message='OK', response=200)
