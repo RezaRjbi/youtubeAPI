@@ -1,5 +1,5 @@
-api/YT_API/__pycache__/__init__.cpython-38.pyc
-api/YT_API/__pycache__/get_info.cpython-38.pyc
-api/YT_API/__pycache__/routes.cpython-38.pyc
 apivenv/
 api/.idea/
+youtube_dl/
+.vscode/
+.idea/
