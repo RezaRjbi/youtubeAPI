@@ -1,11 +1,8 @@
-import os
+from YT_API.utils import link_checker
+import youtube_dl
 import sys
 
-PATH = os.path.join(os.getcwd())
-sys.path.append(PATH)
-
-import youtube_dl
-from YT_API.utils import link_checker
+sys.path.append('.')
 
 
 class VideoObj:
