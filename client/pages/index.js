@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Form from './form';
 
 export default () => (
   <div className="container">
@@ -10,9 +11,7 @@ export default () => (
       {"will be header :)))))))))))))))))))))"}
     </header>
     <main>
-      <h1 className="title">
-        HELLO
-        </h1>
+      <Form />
     </main>
     <footer>
       {"will be footer :)))))))))))))))))))))"}
@@ -38,7 +37,7 @@ export default () => (
 
         header, footer {
           width: 100%;
-          height: 100px;
+          height: 70px;
           border-top: 1px solid #eaeaea;
           display: flex;
           justify-content: center;
