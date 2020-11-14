@@ -4,7 +4,7 @@
 //   return baseUrl
 // })()
 
-const currentBaseUrl = 'http://37.152.181.93'
+const currentBaseUrl = 'http://www.iryoutubedl.tk'
 
 const apiPort = process.env.API_PORT || 8080
 
