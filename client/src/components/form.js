@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { httpClient } from './utils/http'
+import { httpClient } from '../utils/http'
 
 export default () => {
   const { register, handleSubmit } = useForm()

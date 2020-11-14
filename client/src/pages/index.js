@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Form from './form';
+import Form from '../components/form';
 
 export default () => (
   <div className="container">
