@@ -1,10 +1,12 @@
 // const currentBaseUrl = (() => {
-//   const urlLoc = window.location
-//   const baseUrl = urlLoc.protocol + '//' + urlLoc.hostname
-//   return baseUrl
+//   if (typeof window !== "undefined") {
+//     const urlLoc = window.location
+//     const baseUrl = urlLoc.protocol + '//' + urlLoc.hostname
+//     return baseUrl
+//   }
 // })()
 
-const currentBaseUrl = 'http://www.iryoutubedl.tk'
+const currentBaseUrl = 'http://37.152.181.93'
 
 const apiPort = process.env.API_PORT || 8080
 
