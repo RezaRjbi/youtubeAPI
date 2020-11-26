@@ -3,7 +3,7 @@ from YT_API.utils import link_type
 
 
 class YouTube:
-    API_KEY = 'AIzaSyA20aP7050g9V8ufXKn755gY7ym8oyTbKs'
+    API_KEY = ''
     youtube = build('youtube', 'v3', developerKey=API_KEY)
     channel_id = None
     response_dic = None
